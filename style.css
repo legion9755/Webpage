@@ -1,0 +1,331 @@
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    /* Using Poppins font */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f5, #e0e0e5, #f0f0f5); /* Initial gradient */
+    background-size: 400%; /* Adjust this value to control the gradient spread */
+    animation: bgGradientShift 20s ease infinite alternate; /* Add animation */
+  }
+  
+  /* Animation for the background gradient shift */
+  @keyframes bgGradientShift {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 100%; }
+  }
+  
+  h1, h3 {
+    color: #212529;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  /* Gradient and animation for h2 headings with darker shades */
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    background: linear-gradient(90deg, #b03, #c30, #8a0, #3a0, #0a3, #03a, #30a, #a03); /* Darker shades */
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .profile-image {
+    width: 180px; /* Make the photo larger */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    animation: fadeIn 2s;
+    /* Remove transform and border-radius on hover */
+    /* transform: scale(1.1); */  
+    /* border-radius: 20%; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Initial shadow */
+    transition: all 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .profile-image:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4), /* Larger shadow on hover */
+                0 0 10px #007bff, /* Neon glow effect */
+                0 0 20px #007bff,
+                0 0 30px #007bff;
+    border-color: #0056b3; /* Change border color on hover */
+  }
+  
+  .image-container {
+    overflow: hidden; /* Hide overflow to prevent image from going out of the box */
+  }
+  
+  /* Button styles */
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Move slightly up */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  /* More complex hover animation for buttons */
+  .btn-animated:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { 
+      transform: scale(1.05); 
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    100% { transform: scale(1); }
+  }
+  
+  header {
+    text-align: center; /* Center the content horizontally */
+    margin-bottom: 50px;
+    /* Gradient for the blue box with animation */
+    background: linear-gradient(90deg, #3399ff, #809fff, #3399ff); 
+    background-size: 200%; /* Adjust this value to control the gradient spread */
+    color: white;
+    padding: 60px 0; /* Increase padding to make the box bigger */
+    border-radius: 0 0 10px 10px;
+    transition: transform 0.3s ease; /* Add transition for zoom effect */
+    animation: gradientShift 10s ease infinite alternate; /* Add animation */
+    display: flex; /* Make header a flex container */
+    align-items: center; /* Vertically align items */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  /* Zoom effect on hover for the blue box */
+  header:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animation for the gradient shift */
+  @keyframes gradientShift {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 0%; }
+  }
+  
+  .header-content {
+    display: flex; /* Make header content a flex container */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Take full width of the header */
+    justify-content: center; /* Center the content horizontally */
+    padding: 0 20px; 
+    gap: 20px; 
+  }
+  
+  .header-text {
+    /* Remove margin-left: auto */ 
+    text-align: center; /* Center the text content */
+    /* Add some space between image and text */
+    margin-left: 20px; 
+    margin-top: 20px;
+  }
+  
+  .header-text h1 {
+    /* Reduce font size and line height for better fit */
+    font-size: 1.8rem;  
+    line-height: 1.2; 
+  }
+  
+  .header-text p {
+    margin-bottom: 20px; /* Add space between paragraph and buttons */
+  }
+  
+  .name-heading {
+    font-family: 'Lobster', cursive; /* Use a cooler font */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-top: 40px;
+  }
+  
+  /* Common styles for all grid containers */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .grid-container>div {
+    border: 1px solid #ced4da;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 1s ease;
+    background-color: #fff; /* Add white background to all boxes */
+    animation: floatAnimation 6s ease-in-out infinite; /* Add floating animation */
+  }
+  
+  /* Floating animation */
+  @keyframes floatAnimation {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(10px, 5px); }
+    50% { transform: translate(-5px, 10px); }
+    75% { transform: translate(-10px, -5px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .grid-container>div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation-play-state: paused; /* Pause floating animation on hover */
+  }
+  
+  .contact-info {
+    /* Make contact info a flex container */
+    display: flex;
+    /* Align buttons to the left */
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .project {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styles for Extra-curricular activities */
+  .extra-curricular {
+    /* Remove italic and use normal font */
+    font-style: normal;
+    color: #6c757d;
+    font-size: 1.1rem; /* Slightly larger font size */
+  }
+  
+  /* Styles for Scores section */
+  .score-item {
+    border: 1px solid #ced4da;
+    padding: 15px;
+    border-radius: 5px;
+    /* Make score boxes take up full width */
+    width: 100%;
+    transition: all 0.3s ease;
+    text-align: center; /* Center text within boxes */
+    font-size: 1.1rem; /* Slightly larger font size */
+  }
+  
+  .score-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover animation for text */
+  h1:hover,
+  h3:hover,
+  p:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Animation for list items */
+  li {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  li:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  li:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  li:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* ... add more delays for additional list items */
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bulleted list styles for skills */
+  .skills-grid ul {
+    list-style-type: disc;
+    /* Use bullet points */
+    padding-left: 20px;
+    /* Add some left padding */
+  }
+  
+  .skills-grid li {
+    margin-bottom: 5px;
+    /* Add spacing between list items */
+  }
